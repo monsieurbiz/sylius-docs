@@ -1,3 +1,5 @@
+# Create a simple fixture
+
 We will create a simple fixture to add a custom category
 
 Modify the file `apps/sylius/app/config/config.yml` : 

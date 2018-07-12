@@ -55,39 +55,48 @@
 </head>
 <body>
   <div id="app"></div>
-  <script>
-    window.$docsify = {
-      // basePath: '/magento1/',
-      name: 'Docs Template',
-      repo: 'monsieurbiz/sylius-docs',
-      alias: {
-      },
-      coverpage: true,
-      themeColor: '#269C80',
-      loadSidebar: true,
-      search: {
-        noData: {
-          '/': 'No results!'
-        },
-        paths: 'auto',
-        placeholder: {
-          '/': 'Search'
-        }
-      },
-      auto2top: true
-    };
-    window.addEventListener("load", function() {
-        document.querySelector('.app-name-link').innerHTML = '<img src="https://camo.githubusercontent.com/265cc1eda879e8df0eba8c31388f6545d3fccceb/68747470733a2f2f64656d6f2e73796c6975732e636f6d2f6173736574732f73686f702f696d672f6c6f676f2e706e67" />';
-    });
-  </script>
 
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
   <script src="//unpkg.com/docsify-copy-code"></script>
+  <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
 
   <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-php.min.js"></script>
+
+  <script>
+      window.$docsify = {
+          // basePath: '/magento1/',
+          name: 'Docs Template',
+          repo: 'monsieurbiz/sylius-docs',
+          alias: {
+          },
+          coverpage: true,
+          themeColor: '#269C80',
+          loadSidebar: true,
+          search: {
+              noData: {
+                  '/': 'No results!'
+              },
+              paths: 'auto',
+              placeholder: {
+                  '/': 'Search'
+              }
+          },
+          auto2top: true,
+          plugins: [
+              EditOnGithubPlugin.create(
+                  'https://github.com/monsieurbiz/sylius-docs/blob/master/',
+                  null,
+                  '📝 Edit Page'
+              )
+          ]
+      };
+      window.addEventListener("load", function() {
+          document.querySelector('.app-name-link').innerHTML = '<img src="https://camo.githubusercontent.com/265cc1eda879e8df0eba8c31388f6545d3fccceb/68747470733a2f2f64656d6f2e73796c6975732e636f6d2f6173736574732f73686f702f696d672f6c6f676f2e706e67" />';
+      });
+  </script>
 
 </body>
 </html>

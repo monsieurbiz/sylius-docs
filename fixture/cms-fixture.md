@@ -1,6 +1,6 @@
 # Create a CMS fixture
 
-We will create a fixture to add content using the bitbag CMS plugin.
+We will create a fixture to add content using the [Bitbag CMS plugin](/plugins/bitbag-cms.md).
 
 ## Create a CMS page
 

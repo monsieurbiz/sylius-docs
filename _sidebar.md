@@ -6,6 +6,6 @@
     * [Declare a new bundle](/bundle/declare-bundle.md)
     * [Retrieve Sylius default design for new pages](/bundle/get-sylius-design.md)
 * **Plugins**
-  * [BitBag CMS plugin](plugins/bitbag-cms.md)
+  * [BitBag CMS plugin](/plugins/bitbag-cms.md)
 * **Others**
   * [Serve this documentation](others/serve-this-documentation.md)

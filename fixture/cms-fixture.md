@@ -1,8 +1,8 @@
-# Create a cms fixture
+# Create a CMS fixture
 
-We will create a fixture to add content using the bitbag cms plugin.
+We will create a fixture to add content using the [Bitbag CMS plugin](/plugins/bitbag-cms.md).
 
-## Create a cms page
+## Create a CMS page
 
 Add the following content to `apps/sylius/src/AppBundle/Resources/config/app/fixture.yml` under `fixtures`.
 ```
@@ -33,7 +33,7 @@ You have to replace the fields:
 - `Slug of the CMS page`: this is the slug of the CMS page. Can be identical as the identifier, but you can localize it, which is better.
 - `CMS page content.`: this is the content of your CMS page.
 
-## Create a cms block
+## Create a CMS block
 Add the following content to `apps/sylius/src/AppBundle/Resources/config/app/fixture.yml` under `fixtures`.
 
 ```

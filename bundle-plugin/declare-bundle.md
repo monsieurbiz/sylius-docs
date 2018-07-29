@@ -1,19 +1,21 @@
 # Declare a new bundle
 
-Let's create a CustomBundle in our Sylius installation !
+A bundle is created to extends Symfony behaviour, without using Sylius functionalities.
 
-First create the file `src/CustomBundle/CustomBundle.php` :
+Let's create a MbizCustomBundle in our Sylius installation !
+
+First create the file `src/MbizCustomBundle/MbizCustomBundle.php` :
 
 ```php
 <?php
 
 declare(strict_types=1);
 
-namespace CustomBundle;
+namespace Mbiz\MbizCustomBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class CustomBundle extends Bundle
+class MbizCustomBundle extends Bundle
 {
 }
 ```
@@ -25,7 +27,7 @@ public function registerBundles(): array
     {
         $bundles = [
             // [...]
-            new \CustomBundle\CustomBundle(),
+            new Mbiz\MbizCustomBundle\MbizCustomBundle(),
         ];
         // [...]
     }
@@ -34,14 +36,15 @@ public function registerBundles(): array
 
 This is not enough to make your bundle works, you'll have an error like : 
 ```bash
-Fatal error: Uncaught Symfony\Component\Debug\Exception\ClassNotFoundException: Attempted to load class "CustomBundle" from namespace "CustomBundle".
-Did you forget a "use" statement for another namespace? in /var/www/apps/sylius/app/AppKernel.php:33
+Fatal error: Uncaught Error: Class 'Mbiz\MbizCustomBundle\MbizCustomBundle' not found in /var/www/apps/sylius/app/AppKernel.php:38
 Stack trace:
 #0 /var/www/apps/sylius/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(409): AppKernel->registerBundles()
 #1 /var/www/apps/sylius/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(120): Symfony\Component\HttpKernel\Kernel->initializeBundles()
 #2 /var/www/apps/sylius/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Console/Application.php(65): Symfony\Component\HttpKernel\Kernel->boot()
 #3 /var/www/apps/sylius/vendor/symfony/symfony/src/Symfony/Component/Console/Application.php(145): Symfony\Bundle\FrameworkBundle\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
-#4 /var/www/apps/sylius/bin/console(29): Symfony\Component\Console\App in /var/www/apps/sylius/app/AppKernel.php on line 33
+#4 /var/www/apps/sylius/bin/console(29): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput))
+#5 {main}
+  thrown in /var/www/apps/sylius/app/AppKernel.php on line 33
 ```
 
 You have to add it in composer autoload in editing `composer.json` :
@@ -51,7 +54,7 @@ You have to add it in composer autoload in editing `composer.json` :
     "autoload": {
         "psr-4": {
 			//...
-            "CustomBundle\\": "src/CustomBundle/"
+            "Mbiz\\MbizCustomBundle\\": "src/MbizCustomBundle/"
         },
 	//...
     },
@@ -59,7 +62,7 @@ You have to add it in composer autoload in editing `composer.json` :
 ```
 
 Then, you have to update the autoload in composer.  
-You can make it with the command : `composer dump-autoload`
+You can make it with the command `composer dump-autoload` in the root folder of your Sylius installation.
 
 Now, your bundle is created, and you can begin to customize your Sylius platform with it :)
 

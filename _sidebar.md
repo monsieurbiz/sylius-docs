@@ -2,7 +2,7 @@
   * **Fixtures**
     * [Create a simple fixture](/fixture/simple-fixture.md)
     * [Create a CMS fixture](/fixture/cms-fixture.md)
-  * **Bundles & Plugin**
+  * **Bundles & Plugins**
     * [Declare a new bundle](/bundle-plugin/declare-bundle.md)
     * [Declare a new plugin](/bundle-plugin/declare-plugin.md)
   * **Templating**

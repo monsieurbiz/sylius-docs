@@ -7,6 +7,7 @@
     * [Declare a new plugin](/bundle-plugin/declare-plugin.md)
   * **Templating**
     * [Extend a layout](/templating/extend-layout.md)
+    * [Use a localized date in a twig template](/templating/localized-date.md)
 * **External Plugins**
   * [BitBag CMS plugin](/plugins/bitbag-cms.md)
 * **Others**
